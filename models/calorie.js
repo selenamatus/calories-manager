@@ -1,11 +1,11 @@
-const mongoose = require('mongoose'); 
+const mongoose = require('mongoose');
 
-const CalorieSchema = new mongoose.Schema({ 
+const CalorieSchema = new mongoose.Schema({
   user_id: String,
   year: Number,
   month: Number,
   day: Number,
-  id: String,
+  id: String, // Custom ID generated on the server side
   description: String,
   category: {
     type: String,
@@ -14,4 +14,4 @@ const CalorieSchema = new mongoose.Schema({
   amount: Number,
 });
 
-module.exports = mongoose.model('Calorie', CalorieSchema); 
+module.exports = mongoose.model('Calorie', CalorieSchema);
