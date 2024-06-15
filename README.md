@@ -39,13 +39,14 @@ npm install
 
 3.Set up MongoDB Atlas and configure your .env file (see Configuration section).
 
-## Configuration
+ (#configuration)
+
 Create a .env file in the root directory of the project.
 Add your MongoDB connection string to the .env file:
 MONGO_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/<dbname>?retryWrites=true&w=majority
 Replace <username>, <password>, and <dbname> with your actual MongoDB credentials and database name.
 
-## Useage
+## Usage
 
 1.Run the database setup script to create collections and insert initial data:
 node setupDB.js
