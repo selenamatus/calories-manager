@@ -39,7 +39,7 @@ npm install
 
 3.Set up MongoDB Atlas and configure your .env file (see Configuration section).
 
- (#configuration)
+## Configuration
 
 Create a .env file in the root directory of the project.
 Add your MongoDB connection string to the .env file:
