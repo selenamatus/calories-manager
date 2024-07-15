@@ -1,19 +1,24 @@
+//Ofek Daida ID 315143958 , Daniella Aharonov ID: 314750621, Selena Matusevich ID: 206511503
+
 const express = require('express');
-const connectDB = require('./config/db');
 const bodyParser = require('body-parser');
+const cors = require('cors');
+const db = require('./config/db');
+const caloriesRoutes = require('./routes/calories');
+const usersRoutes = require('./routes/users');
+const reportRoutes = require('./routes/report');
+const aboutRoutes = require('./routes/about');
 
 const app = express();
-
-// Connect Database
-connectDB();
-
-// Init Middleware
+app.use(cors());
 app.use(bodyParser.json());
 
-// Define Routes
-app.use('/', require('./routes/calorie'));
-app.use('/users', require('./routes/user'));
+app.use('/api', caloriesRoutes);
+app.use('/api', usersRoutes);
+app.use('/api', reportRoutes);
+app.use('/api', aboutRoutes);
 
-const PORT = process.env.PORT || 5000;
-
-app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});

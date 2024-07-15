@@ -2,8 +2,9 @@
 
 const express = require('express');
 const router = express.Router();
-const aboutController = require('../controllers/aboutController');
+const reportController = require('../controllers/reportController');
 
-router.get('/about', aboutController.getAbout);
+router.get('/report', reportController.getReport);
 
 module.exports = router;
+

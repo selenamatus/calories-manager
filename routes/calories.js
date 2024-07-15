@@ -2,8 +2,8 @@
 
 const express = require('express');
 const router = express.Router();
-const aboutController = require('../controllers/aboutController');
+const caloriesController = require('../controllers/caloriesController');
 
-router.get('/about', aboutController.getAbout);
+router.post('/addcalories', caloriesController.addCalories);
 
 module.exports = router;

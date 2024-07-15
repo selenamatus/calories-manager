@@ -1,17 +1,16 @@
+//Ofek Daida ID 315143958 , Daniella Aharonov ID: 314750621, Selena Matusevich ID: 206511503
+
 const mongoose = require('mongoose');
 
-const CalorieSchema = new mongoose.Schema({
-  user_id: String,
+const calorieSchema = new mongoose.Schema({
+  user_id: Number,
   year: Number,
   month: Number,
   day: Number,
-  id: String, // Custom ID generated on the server side
+  id: Number,
   description: String,
-  category: {
-    type: String,
-    enum: ['breakfast', 'lunch', 'dinner', 'other'],
-  },
-  amount: Number,
+  category: String,
+  amount: Number
 });
 
-module.exports = mongoose.model('Calorie', CalorieSchema);
+module.exports = mongoose.model('Calorie', calorieSchema);

@@ -1,10 +1,12 @@
+//Ofek Daida ID 315143958 , Daniella Aharonov ID: 314750621, Selena Matusevich ID: 206511503
+
 const mongoose = require('mongoose');
 
-const UserSchema = new mongoose.Schema({
-  id: String, // Separate id generated on the server side
+const userSchema = new mongoose.Schema({
+  id: String, 
   first_name: String,
   last_name: String,
-  birthday: Date,
+  birthday: Date
 });
 
-module.exports = mongoose.model('User', UserSchema);
+module.exports = mongoose.model('User', userSchema);
