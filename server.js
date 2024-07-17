@@ -14,10 +14,10 @@ app.use(cors()); // Using CORS to prevent cross-domain issues
 app.use(bodyParser.json()); // Using body-parser to parse JSON from requests
 
 // Defining routes
-app.use('/api', caloriesRoutes);
-app.use('/api', usersRoutes);
-app.use('/api', reportRoutes);
-app.use('/api', aboutRoutes);
+app.use('/', caloriesRoutes);
+app.use('/', usersRoutes);
+app.use('/', reportRoutes);
+app.use('/', aboutRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, '0.0.0.0', () => {
