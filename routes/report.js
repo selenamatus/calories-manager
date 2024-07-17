@@ -5,7 +5,7 @@ const router = express.Router();
 const reportController = require('../controllers/reportController');
 
 // Defining the GET route for retrieving a report
-router.get('/report', reportController.getReport);
+router.get('/', reportController.getReport);
 
 module.exports = router;
 

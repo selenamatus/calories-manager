@@ -5,6 +5,14 @@ const router = express.Router();
 const aboutController = require('../controllers/aboutController');
 
 // Defining the GET route for retrieving developer information
-router.get('/about', aboutController.getAbout);
+router.get('/', (req, res) => {
+    res.json({
+      message: "About route is working"
+    });
+  });
+  
 
 module.exports = router;
+
+
+
