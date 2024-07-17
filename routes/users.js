@@ -5,6 +5,9 @@ const router = express.Router();
 const usersController = require('../controllers/usersController');
 
 // Defining the GET route for retrieving user details by ID
-router.get('/users/:id', usersController.getUserById);
+router.get('/:id', usersController.getUserById);
+
 
 module.exports = router;
+
+
