@@ -6,5 +6,5 @@ exports.getAbout = (req, res) => {
     { firstname: "tal", lastname: "levy", id: 34534544, email: "tal@gmail.com" }
   ];
 
-  res.json(developers);
+  res.json(developers); // Sending the developer information as a response
 };

@@ -4,6 +4,7 @@ const User = require('../models/user');
 
 exports.getUserById = async (req, res) => {
   try {
+    // Fetching the user from the database by ID
     const user = await User.findOne({ id: req.params.id });
     if (user) {
       res.json(user);

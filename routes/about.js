@@ -4,6 +4,7 @@ const express = require('express');
 const router = express.Router();
 const aboutController = require('../controllers/aboutController');
 
+// Defining the GET route for retrieving developer information
 router.get('/about', aboutController.getAbout);
 
 module.exports = router;
